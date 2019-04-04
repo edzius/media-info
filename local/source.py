@@ -37,7 +37,7 @@ def matchSeason(value):
         return int(ret.group(1))
 
 def matchEpisode(value):
-    ret = re.compile("E(\d+)$", value, re.I)
+    ret = re.match("E(\d+)$", value, re.I)
     if ret:
         return int(ret.group(1))
 
