@@ -2,7 +2,7 @@
 from . import source
 
 
-def inspect(path, onlyName):
+def inspect(path, onlyName=False):
     if onlyName:
         return source.processFileName(path)
     return source.processDirName(path) or \
