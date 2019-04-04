@@ -84,18 +84,18 @@ def processName(name):
             ret['ext'] = ext
             lastId = idx
         if lang:
-            ret['lang'] = ret['lang'] or []
+            ret['lang'] = ret['lang'] if 'lang' in ret else []
             ret['lang'].append(lang)
             lastId = idx
         if subs:
-            ret['subs'] = ret['subs'] or []
+            ret['subs'] = ret['subs'] if 'subs' in ret else []
             ret['subs'].append(subs)
             lastId = idx
         if 'year' not in ret and year:
             ret['year'] = year
             lastId = idx
         if code:
-            ret['code'] = ret['code'] or []
+            ret['code'] = ret['code'] if 'code' in ret else []
             ret['code'].append(code)
             lastId = idx
         if 'season' not in ret and season:
