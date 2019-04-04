@@ -59,10 +59,10 @@ def take(obj, key):
     return None
 
 
-def want(guess):
+def want(guess, title=None):
     if not guess:
         return
-    return omdbi.inspect(take(guess, 'title'),
+    return omdbi.inspect(title or take(guess, 'title'),
                          take(guess, 'year'),
                          take(guess, 'type'),
                          take(guess, 'season'),
