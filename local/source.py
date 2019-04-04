@@ -29,7 +29,7 @@ def matchYear(value):
 def matchCoding(value):
     ret = re.match("^(x264|h264|web\-?rip|web\-?dl|web\-?dlrip|dvd\-?rip|b[dr]\-?rip|hd\-?rip|hdtv|720p|1080p|avc|aac|ac3|dts|divx|xvid|bluray)$", value, re.I)
     if ret:
-        return int(ret.group(1))
+        return ret.group(1)
 
 def matchSeason(value):
     ret = re.match("^S(\d+)", value, re.I)
