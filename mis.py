@@ -100,7 +100,7 @@ class MisInfo(Resource):
         if value:
             return value
 
-        guessFile = local.inspect(args.filename, true)
+        guessFile = local.inspect(args.filename, True)
         value = want(guessFile)
         if value:
             return value
